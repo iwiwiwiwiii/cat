@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import styles from './Footer.module.css';
 
@@ -8,12 +6,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.top}>
         <div className={styles.brand}>
-          <Image 
-            src="/images/icon.png" 
-            alt="Logo" 
-            width={40} 
-            height={40} 
-          />
+          <Image src="/images/icon.png" alt="Logo" width={40} height={40} />
           <p>Your Pets Best Life Starts Here.</p>
         </div>
 
@@ -36,7 +29,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.bottom}>
-        <p>© {new Date().getFullYear()} Pet Store. All rights reserved.</p>
+        <p>© 2025 Pet Store. All rights reserved.</p>
         <p>Design by Paloma Marmolejo</p>
       </div>
     </footer>

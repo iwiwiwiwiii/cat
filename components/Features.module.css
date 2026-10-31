@@ -1,6 +1,8 @@
 .features {
   padding: 5rem 5%;
   background-color: #FFF8F3;
+  border-top: none !important;
+  margin-top: 0;
 }
 
 .header {

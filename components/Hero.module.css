@@ -2,35 +2,42 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 140px 5% 2rem;
+  padding: 100px 0 0 5%;
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .content {
   flex: 1;
   max-width: 550px;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 2rem;
+  margin-top: -100px;
 }
 
 .title {
   font-size: 3.5rem;
   line-height: 1.15;
-  color: var(--text-primary);
+  color: #6F5039;
   margin-bottom: 1.5rem;
   font-weight: 800;
 }
 
 .description {
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.6;
-  color: var(--text-secondary);
-  margin-bottom: 2.5rem;
+  
+  color: #000000;
+  margin-bottom: 2rem;
 }
 
 .ctaButton {
-  background-color: var(--btn-bg);
-  color: var(--btn-text);
+  background-color: #6F5039;
+  color: #ffffff;
   border: none;
   padding: 1rem 2.5rem;
   font-size: 1rem;
@@ -47,7 +54,7 @@
 .imageWrapper {
   flex: 1;
   position: relative;
-  height: 65vh;
+  height: 75vh;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -57,11 +64,11 @@
 .blob {
   position: absolute;
   bottom: 0;
-  right: -15%;
-  width: 130%;
-  height: 100%;
-  background-color: var(--accent-peach);
-  border-radius: 60% 40% 0 0 / 80% 80% 0 0;
+  right: 0; 
+  width: 150%;
+  height: 120%;
+  object-fit: full; 
+  object-position: right bottom;
   z-index: 0;
 }
 
@@ -69,7 +76,9 @@
   object-fit: contain;
   object-position: bottom;
   z-index: 3;
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+  margin-bottom: -1px;
+  transform: translateX(120px); 
 }
 
 .paw {
@@ -78,58 +87,70 @@
 }
 
 .pawLight {
-  top: 8%;
-  right: 82%;
-  transform: rotate(-15deg);
+  top: -10px;
+  right: 83%;
+  transform: none;
   opacity: 0.85;
 }
 
 .pawTopRight {
-  top: 22%;
-  right: 8%;
-  transform: rotate(25deg);
+  bottom: 88%;
+  right: 22%;
+  transform: rotate(30deg);
   opacity: 0.9;
 }
 
-.pawMiddleRight {
-  top: 55%;
-  right: 4%;
-  transform: rotate(-10deg);
+.pawBottomRight {
+  bottom: 50%;
+  right: 5%;
+  transform: rotate(10deg);
   opacity: 0.9;
 }
 
 .pawMiddleLeft {
-  top: 45%;
-  left: 6%;
-  transform: rotate(15deg);
+  top: 80%;
+  left: 190px;
+  transform: rotate(-20deg);
   opacity: 0.9;
 }
-
 .pawBottomLeft {
   bottom: 10%;
-  left: 15%;
+  right:10% ;
   transform: rotate(-15deg);
   opacity: 0.9;
 }
 
 @media (max-width: 1024px) {
   .title { font-size: 3rem; }
-  .hero { padding-top: 150px; }
+  .hero { padding-top: 120px; }
+  .imageWrapper { height: 65vh; }
 }
 
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
-    padding: 130px 1rem 2rem;
+    padding: 120px 1rem 0;
     text-align: center;
+    min-height: auto;
   }
-  .content { max-width: 100%; margin-bottom: 2rem; }
-  .imageWrapper { width: 100%; height: 420px; }
-  .blob { width: 100%; right: 0; }
+  .content { 
+    max-width: 100%; 
+    margin-bottom: 2rem; 
+    align-items: center;
+  }
+  .imageWrapper { 
+    width: 100%; 
+    height: 450px; 
+  }
+  .blob { 
+    width: 100%; 
+    right: 0; 
+    height: 100%;
+  }
 
-  .pawLight { top: 5%; left: 15%; width: 90px; }
-  .pawTopRight { top: 10%; right: 5%; width: 50px; }
-  .pawMiddleRight { top: 50%; right: 3%; width: 45px; }
-  .pawMiddleLeft { top: 40%; left: 5%; width: 50px; }
-  .pawBottomLeft { bottom: 5%; left: 10%; width: 45px; }
+  .pawLight { top: 5%; right: 77%; width: 60px; }
+  .pawTopRight { top: 10%; right: 5%; width: 45px; }
+  .pawBottomRight { bottom: 20%; right: 5%; width: 45px; }
+  .pawMiddleLeft { top: 45%; left: 5%; width: 45px; }
+  .pawBottomLeft { bottom: 5%; left: 15%; width: 45px; }
 }
